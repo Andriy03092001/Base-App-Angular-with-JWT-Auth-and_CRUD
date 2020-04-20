@@ -1,0 +1,10 @@
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.deps.json
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.dll
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.runtimeconfig.json
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.pdb
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.dll
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.pdb
