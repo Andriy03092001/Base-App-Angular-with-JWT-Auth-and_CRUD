@@ -39,6 +39,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Project P34.DataAccess\Project P34.DataAccess.csproj" />
     <ProjectReference Include="..\Project P34.Domain\Project P34.Domain.csproj" />
+    <ProjectReference Include="..\Project P34.DTO\Project P34.DTO.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

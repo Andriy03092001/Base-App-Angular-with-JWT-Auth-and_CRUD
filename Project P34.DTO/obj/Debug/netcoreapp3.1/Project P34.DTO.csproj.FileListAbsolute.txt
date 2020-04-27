@@ -1,0 +1,8 @@
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DTO\bin\Debug\netcoreapp3.1\Project P34.DTO.deps.json
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DTO\bin\Debug\netcoreapp3.1\Project P34.DTO.dll
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DTO\bin\Debug\netcoreapp3.1\Project P34.DTO.pdb
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DTO\obj\Debug\netcoreapp3.1\Project P34.DTO.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DTO\obj\Debug\netcoreapp3.1\Project P34.DTO.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DTO\obj\Debug\netcoreapp3.1\Project P34.DTO.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DTO\obj\Debug\netcoreapp3.1\Project P34.DTO.dll
+C:\Users\Admin\Desktop\Project P34\Project P34\Project P34.DTO\obj\Debug\netcoreapp3.1\Project P34.DTO.pdb

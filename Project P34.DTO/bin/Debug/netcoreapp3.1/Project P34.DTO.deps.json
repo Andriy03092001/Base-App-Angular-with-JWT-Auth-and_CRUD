@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Project P34.DTO/1.0.0": {
+        "runtime": {
+          "Project P34.DTO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Project P34.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

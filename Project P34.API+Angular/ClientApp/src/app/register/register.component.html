@@ -1,0 +1,17 @@
+<div class="login-page">
+  <div class="form">
+    <h2>Реєстрація</h2>
+    <form class="login-form" #myForm="ngForm" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Full name" name="fullName" [(ngModel)]="model.fullName" />
+      <input type="text" placeholder="Email" [(ngModel)]="model.email" name="email"/>
+      <input type="password" placeholder="Password" [(ngModel)]="model.password" name="password"/>
+      <input type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword"  name="confirmPassword"/>
+      <input type="text" placeholder="Phone number" [(ngModel)]="model.phoneNumber" name="phoneNumber"/>
+      <input type="text" placeholder="Address"  [(ngModel)]="model.address" name="address"/>
+      <input type="number" placeholder="Age"  [(ngModel)]="model.age" name="age"/>
+
+      <button type="submit">Register</button>
+      <p class="message">Alredy registered ? <a [routerLink]="['/login']">Sign In</a></p>
+    </form>
+  </div>
+</div>
