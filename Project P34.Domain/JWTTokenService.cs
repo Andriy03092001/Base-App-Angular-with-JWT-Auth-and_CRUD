@@ -25,7 +25,7 @@ namespace Project_P34.Domain
             _context = context;
             _configuration = configuration;
             _userManager = userManager;
-        }
+        } 
 
         public string CreateToken(User user)
         {

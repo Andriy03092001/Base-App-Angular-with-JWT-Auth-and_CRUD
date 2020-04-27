@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Project_P34.API_Angular.Helper;
 using Project_P34.DataAccess;
 using Project_P34.DataAccess.Entity;
 using Project_P34.Domain;
@@ -131,6 +132,8 @@ namespace Project_P34.API_Angular
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+            //  SeederDatabase.SeedData(app.ApplicationServices, env, Configuration);
+
         }
     }
 }
