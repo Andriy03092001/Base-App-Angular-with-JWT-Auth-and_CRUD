@@ -1,16 +1,33 @@
-﻿using System;
+﻿using Project_P34.API_Angular.Helper;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Project_P34.DTO.Models
+namespace Project_IDA.DTO.Models
 {
-    public class UserRegisterDTO
+    public class UserRegisterDto
     {
-        public string fullName { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public string phoneNumber { get; set; }
-        public string address { get; set; }
-        public int age { get; set; }
+        [Required(ErrorMessage = "Введіть ПІБ")]
+        public string FullName { get; set; }
+
+        [Required(ErrorMessage = "Введіть електронну пошту")]
+        //[EmailAddress(ErrorMessage = "Некоректно введена електронна пошта")]
+        //[CustomEmail(ErrorMessage = "Така електронна пошта вже зареєстрована")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Введіть пароль")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage = "Введіть вік")]
+        public int Age { get; set; }
+
+        [Required(ErrorMessage = "Введіть телефон")]
+        public string PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Введіть адрес")]
+        public string Address { get; set; }
+
     }
 }

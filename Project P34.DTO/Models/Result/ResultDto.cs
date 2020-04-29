@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project_P34.DTO.Models.Results
+namespace Project_IDA.DTO.Models.Result
 {
-    public class ResultDTO
+    public class ResultDto
     {
         public int Status { get; set; }
         public string Message { get; set; }

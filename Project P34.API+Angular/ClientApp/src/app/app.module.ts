@@ -11,7 +11,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NotifierModule, NotifierOptions } from 'angular-notifier';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+const notifierOptions: NotifierOptions = {
+  position: {horizontal: { position: 'right' }, vertical: { position: 'top' }}
+};
 
 @NgModule({
    declarations: [
@@ -27,7 +33,10 @@ import { AppRoutingModule } from './app-routing.module';
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
       HttpClientModule,
       FormsModule,
-      AppRoutingModule
+      AppRoutingModule,
+      NotifierModule.withConfig(notifierOptions),
+      BrowserAnimationsModule,
+      NgxSpinnerModule
    ],
 
   providers: [],
