@@ -55,6 +55,18 @@ export class LoginComponent implements OnInit {
 
             console.log(data);
             window.localStorage.setItem('token', data.token);
+
+          const jwtData = data.token.split('.')[1];
+          const decodedJwtJsonData = window.atob(jwtData);
+          const decodedJwtData = JSON.parse(decodedJwtJsonData);
+
+          if (decodedJwtData.roles === 'User') {
+            this.router.navigate(['/']);
+          } else if (decodedJwtData.roles === 'Admin') {
+            this.router.navigate(['/admin-panel']);
+          }
+
+
             this.spinner.hide();
 
           } else {

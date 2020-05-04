@@ -21,4 +21,34 @@ export class ApiService {
     return this.http.post<ApiResult>(this.baseUrl + '/login', UserLoginDto);
   }
 
+  isAdmin() {
+    const token = localStorage.getItem('token');
+    if (token !== null) {
+
+      const jwtData = token.split('.')[1];
+      const decodedJwtJsonData = window.atob(jwtData);
+      const decodedJwtData = JSON.parse(decodedJwtJsonData);
+
+      if (decodedJwtData.roles === 'User') {
+        return false;
+      } else if (decodedJwtData.roles === 'Admin') {
+        return true;
+      }
+
+    } else {
+      return false;
+    }
+  }
+
+
+  isLoggedIn() {
+    const token = localStorage.getItem('token');
+    if (token !== null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
 }
