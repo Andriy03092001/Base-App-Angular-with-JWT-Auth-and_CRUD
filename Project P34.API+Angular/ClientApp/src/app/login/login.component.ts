@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
 
             console.log(data);
             window.localStorage.setItem('token', data.token);
+            this.apiService.loginStatus.emit(true);
 
           const jwtData = data.token.split('.')[1];
           const decodedJwtJsonData = window.atob(jwtData);

@@ -1,6 +1,6 @@
 import { SignInModel } from './../Models/login.model';
 import { RegisterModel } from './../Models/register.model';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApiResult } from '../Models/result.model';
@@ -12,6 +12,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   baseUrl = '/api/Account';
+  loginStatus = new EventEmitter<boolean>();
 
   SingUp(UserRegisterDto: RegisterModel): Observable<ApiResult> {
     return this.http.post<ApiResult>(this.baseUrl + '/register', UserRegisterDto);
@@ -40,7 +41,6 @@ export class ApiService {
     }
   }
 
-
   isLoggedIn() {
     const token = localStorage.getItem('token');
     if (token !== null) {
@@ -48,6 +48,11 @@ export class ApiService {
     } else {
       return false;
     }
+  }
+
+  Logout () {
+    localStorage.removeItem('token');
+    this.loginStatus.emit(false);
   }
 
 
