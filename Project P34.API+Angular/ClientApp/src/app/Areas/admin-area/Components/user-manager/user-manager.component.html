@@ -1,4 +1,9 @@
-<nz-table #rowSelectionTable nzShowSizeChanger [nzData]="listOfData" >
+
+<h2>User maneger:</h2>
+
+<input type="text" name="search" [(ngModel)]="searchText" (ngModelChange)="Search()" nz-input placeholder="Search ..." class="input-search"  />
+
+<nz-table #rowSelectionTable nzShowSizeChanger [nzData]="searchResult" >
   <thead>
     <tr>
       <th nzWidth="30%">Name</th>
@@ -6,7 +11,7 @@
       <th>Phone</th>
       <th>Email</th>
       <th>Address</th>
-      <th>Actions</th>
+      <th nzWidth="30%">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -22,7 +27,10 @@
           nz-popconfirm
           nzPopconfirmTitle="Please, confirm delete"
           (nzOnConfirm)="deleteUser(data.id)">Delete</a>
-      </td>
+
+          <a nz-button style="margin-left: 20px;" [routerLink]="['/admin-panel/edit-user/',data.id]">Edit</a>
+
+        </td>
     </tr>
   </tbody>
 </nz-table>

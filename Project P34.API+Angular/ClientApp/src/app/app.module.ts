@@ -22,6 +22,7 @@ import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 import { NZ_I18N } from 'ng-zorro-antd/i18n/public-api';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { UserEditComponent } from './Areas/admin-area/Components/user-manager/user-edit/user-edit.component';
 registerLocaleData(en);
 
 const notifierOptions: NotifierOptions = {
@@ -40,7 +41,8 @@ const notifierOptions: NotifierOptions = {
       AdminAreaComponent,
       UserAreaComponent,
       DashboardComponent,
-      UserManagerComponent
+      UserManagerComponent,
+      UserEditComponent
    ],
    imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),

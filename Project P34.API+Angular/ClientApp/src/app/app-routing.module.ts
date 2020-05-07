@@ -1,3 +1,4 @@
+import { UserEditComponent } from './Areas/admin-area/Components/user-manager/user-edit/user-edit.component';
 
 import { NotLoginGuard } from './guards/notLogin.guard';
 import { AdminGuard } from './guards/admin.guard';
@@ -27,7 +28,8 @@ const routes: Routes = [
     canActivate: [AdminGuard],
     children: [
       { path: '', component: DashboardComponent, pathMatch: 'full' },
-      { path: 'user-manager', component: UserManagerComponent, pathMatch: 'full' }
+      { path: 'user-manager', component: UserManagerComponent, pathMatch: 'full' },
+      { path: 'edit-user/:id', component: UserEditComponent, pathMatch: 'full' }
     ]
   },
 

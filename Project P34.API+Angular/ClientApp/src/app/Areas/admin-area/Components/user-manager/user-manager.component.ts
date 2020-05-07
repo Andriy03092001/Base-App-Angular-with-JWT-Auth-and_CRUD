@@ -13,6 +13,8 @@ import { NotifierService } from 'angular-notifier';
 export class UserManagerComponent implements OnInit {
 
   listOfData: UserItem[] = [];
+  searchResult: UserItem[] = [];
+  searchText: string;
 
   constructor(
     private userService: UserManagerService,
@@ -27,6 +29,10 @@ export class UserManagerComponent implements OnInit {
       (data: ApiResult) => {
         if (data.status === 200) {
           this.notifier.notify('success', 'User removed!');
+
+          this.listOfData = this.listOfData.filter(t => t.id !== id);
+          this.searchResult = this.searchResult.filter(t => t.id !== id);
+
         } else {
           for (let i = 0; i < data.errors; i++) {
             this.notifier.notify('error', data.errors[i]);
@@ -43,13 +49,14 @@ export class UserManagerComponent implements OnInit {
 
     this.userService.getAllUsers().subscribe((AllUsers: UserItem[]) => {
       this.listOfData = AllUsers;
+      this.searchResult = AllUsers;
       this.spinner.hide();
     }
-
     );
+  }
 
-
-
+  Search() {
+    this.searchResult = this.listOfData.filter(t =>  t.fullName.includes(this.searchText) || t.email.includes(this.searchText));
   }
 
 }
