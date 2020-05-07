@@ -18,6 +18,11 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
+import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
+import { NZ_I18N } from 'ng-zorro-antd/i18n/public-api';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+registerLocaleData(en);
 
 const notifierOptions: NotifierOptions = {
   position: {horizontal: { position: 'right' }, vertical: { position: 'top' }}
@@ -44,7 +49,8 @@ const notifierOptions: NotifierOptions = {
       AppRoutingModule,
       NotifierModule.withConfig(notifierOptions),
       BrowserAnimationsModule,
-      NgxSpinnerModule
+      NgxSpinnerModule,
+      DemoNgZorroAntdModule
    ],
 
   providers: [],

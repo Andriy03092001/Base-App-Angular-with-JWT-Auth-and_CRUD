@@ -1,3 +1,28 @@
-<p>
-  user-manager works!
-</p>
+<nz-table #rowSelectionTable nzShowSizeChanger [nzData]="listOfData" >
+  <thead>
+    <tr>
+      <th nzWidth="30%">Name</th>
+      <th>Age</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of rowSelectionTable.data">
+      <td>{{ data.fullName }}</td>
+      <td>{{ data.age }}</td>
+      <td>{{ data.phone }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{ data.address }}</td>
+      <td>
+          <a nz-button nzType="primary"
+          style="color:white"
+          nz-popconfirm
+          nzPopconfirmTitle="Please, confirm delete"
+          (nzOnConfirm)="deleteUser(data.id)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
